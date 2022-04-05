@@ -31,6 +31,8 @@ jobs:
        # if: github.ref == 'refs/heads/qa' && github.event_name == 'push'
         run: |
           #cd ppb
+          export AWS_ACCESS_KEY_ID=AKIA2DPJPWLRSTLULZQ2
+          export AWS_SECRET_ACCESS_KEY=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
           terraform init
           terraform workspace new dev
           terraform validate -no-color

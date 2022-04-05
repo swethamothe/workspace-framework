@@ -1,13 +1,20 @@
+#terraform {
+ # cloud {
+  #  organization = "swethamothe"
+
+   # workspaces {
+    #  name = "Development"
+    #}
+  #}
+#}
 terraform {
-  cloud {
-    organization = "swethamothe"
-
-    workspaces {
-      name = "Development"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      
+      #version = ">= 3.20.0"
     }
-  }
-}
-
+	  
 provider "aws" {
 	region  = local.workspace["vpc_region"]
 }

@@ -1,3 +1,13 @@
+terraform {
+  cloud {
+    organization = "swethamothe"
+
+    workspaces {
+      name = "Development"
+    }
+  }
+}
+
 provider "aws" {
 	region  = local.workspace["vpc_region"]
 }

@@ -14,5 +14,5 @@ resource "aws_vpc" "myvpc" {
 resource "aws_subnet" "subnet" {
     vpc_id = aws_vpc.myvpc.id
     cidr_block = var.subnet
-	availability_zone = "us-east-2a"
+	availability_zone = "eu-west-2a"
 }
